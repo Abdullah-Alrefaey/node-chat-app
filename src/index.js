@@ -35,7 +35,7 @@ io.on('connection', (socket) => {
         // If the user is already added
         socket.join(user.room);
 
-        // Send an message event to the client
+        // Send a message event to the client
         socket.emit('message', generateMessage('Admin', 'Welcome!'));
 
         // emit an event to everybody in a specific room
@@ -46,7 +46,7 @@ io.on('connection', (socket) => {
         });
 
         callback();
-    })
+    });
 
     // Listen to event from the client
     socket.on('sendMessage', (message, callback) => {

@@ -55,7 +55,7 @@ socket.on('message', (message) => {
     autoscroll();
 });
 
-// Recieve the locationMessage event sent from the server
+// Receive the locationMessage event sent from the server
 socket.on('locationMessage', (message) => {
     console.log(message);
     const html = Mustache.render(locationMessageTemplate, {
